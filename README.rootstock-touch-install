@@ -27,7 +27,7 @@ Now select "Boot to Recovery" (or similar) in the bootloader menu
 
 Once the device booted into recovery mode run rootsotck-touch-install:
 
-./rootsotck-touch-install ./trusty-trusty-preinstalled-touch-armhf.tar.gz ./system.img
+./rootstock-touch-install ./trusty-trusty-preinstalled-touch-armhf.tar.gz ./system.img
 
 (the above example assumes the needed files are in the current dir)
 
