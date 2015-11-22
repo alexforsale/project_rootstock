@@ -6,9 +6,14 @@ Grab the latest tarball at [ubuntu](http://cdimage.ubuntu.com/ubuntu-touch/daily
 or if you want the previous version, [vivid](http://cdimage.ubuntu.com/ubuntu-touch/vivid/daily-preinstalled/current/) or even [saucy](http://cdimage.ubuntu.com/ubuntu-touch/saucy/daily-preinstalled/20131127/)
 it's named xxx-preinstalled-touch-armhf.tar.gz put it in this folder.
 flash the boot image using fastboot (assuming this is in $ANDROID_ROOT/project-rootstock-ng)
+
     fastboot flash boot ../out/target/product/armani/boot.img
+
 then reboot to recovery, either by removing battery or simply
+
     fastboot boot ../out/target/product/armani/recovery.img (if you want to use the compiled recovery, reboot to recovery again using the menu to use your flashed recovery)
+
 Once the device booted into recovery mode run rootsotck-touch-install:
+
     ./rootstock-touch-install ./(the tarball downloaded) ./../out/target/product/armani/system.img
 
