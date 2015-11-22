@@ -13,7 +13,7 @@ then reboot to recovery, either by removing battery or simply
 
     fastboot boot ../out/target/product/armani/recovery.img (if you want to use the compiled recovery, reboot to recovery again using the menu to use your flashed recovery)
 
-Once the device booted into recovery mode run rootsotck-touch-install:
+Once the device booted into recovery mode run rootstock-touch-install:
 
     ./rootstock-touch-install ./(the tarball downloaded) ./../out/target/product/armani/system.img
 
