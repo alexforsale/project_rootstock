@@ -197,6 +197,22 @@ echo "[done]"
 
 echo -n "enabling Mir ... "
 do_shell "touch /cache/system/home/phablet/.display-mir"
+
+#
+# push armani overlays 
+#
+echo "push armani overlays just in case the mount_ubuntu_overlay function in touch scripts fail"
+push_overlays()
+{
+	source=$PWD/configs
+	OLD_PWD=$PWD
+	cd $source
+		for overlay in `find . -type f` ; do
+			adb push $overlay /cache/system/$overlay
+		done
+	cd $OLD_PWD
+}
+push_overlays
 echo "[done]"
 
 echo -n "cleaning up on device ... "

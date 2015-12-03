@@ -110,6 +110,27 @@ check_files()
 	echo
 }
 
+copy_overlays()
+{
+	source=$OUT/system/ubuntu
+	target=$PWD/configs
+
+	rm -rf $target/*
+	mkdir -p configs
+	
+	OLD_PWD=$PWD
+		cd $source
+		for overlaydirs in `find . -type d ` ; do
+			mkdir -p $target/$overlaydirs
+		done
+
+		for overlay in `find . -type f` ; do
+			[ -f ${target}/${overlay} ] 
+			cp ${overlay} ${target}/${overlay}
+		done
+	cd $OLD_PWD
+}
+
 check_device()
 {
 	if [ $(adb devices | grep -cw device) -eq 1 ] || [ $(adb devices | grep -cw recovery) -eq 1 ]; then
@@ -161,6 +182,9 @@ check_device
 echo "list all needed files"
 check_prereq
 check_files
+
+echo "copying overlays from the build dirs"
+copy_overlays
 
 echo "checking device availability"
 check_device
