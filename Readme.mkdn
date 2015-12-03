@@ -2,8 +2,8 @@ rootstock-touch-install for armani
 ===========
 
 Make sure you have already run make at the android repository (see [this link](https://github.com/alexforsale/android_platform_manifest#getting-started)).
-Grab the latest tarball at [ubuntu](http://cdimage.ubuntu.com/ubuntu-touch/daily-preinstalled/current/) for the latest, 
-or if you want the previous version, [vivid](http://cdimage.ubuntu.com/ubuntu-touch/vivid/daily-preinstalled/current/) or even [saucy](http://cdimage.ubuntu.com/ubuntu-touch/saucy/daily-preinstalled/20131127/)
+Grab the latest tarball at [ubuntu](http://cdimage.ubuntu.com/ubuntu-touch/daily-preinstalled/current/) for the latest (xenial at the moment), 
+or if you want the previous version, [vivid](http://cdimage.ubuntu.com/ubuntu-touch/vivid/daily-preinstalled/current/), [utopic](http://spo1.linux.edu.lv/ubuntu-cdimage/ubuntu-touch/daily-preinstalled/20140510/), [trusty](http://spo1.linux.edu.lv/ubuntu-cdimage/ubuntu-touch/daily-preinstalled/20140422/), or even [saucy](http://cdimage.ubuntu.com/ubuntu-touch/saucy/daily-preinstalled/20131127/)
 it's named xxx-preinstalled-touch-armhf.tar.gz put it in this folder.
 
 update: flashing now simplified with a script
